@@ -12,6 +12,7 @@ const footerLinks = {
   Resources: [
     { href: "/apply", label: "Apply as Founder" },
     { href: "/contact", label: "Book Discovery Call" },
+    { href: "/blog", label: "Blog" },
     { href: "#faq", label: "FAQ" },
   ],
   Products: [
