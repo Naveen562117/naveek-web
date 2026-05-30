@@ -11,7 +11,6 @@ import {
   Building2,
   Code2,
   ChevronRight,
-  Star,
   Zap,
   Target,
   Layers,
@@ -75,27 +74,6 @@ const steps = [
   { step: "03", title: "Discovery Session", description: "A deep-dive call to understand your vision, constraints, and define the path forward." },
   { step: "04", title: "Execution Roadmap", description: "We build a detailed plan — milestones, tech stack, business model, and launch timeline." },
   { step: "05", title: "Build & Launch", description: "We execute together. You focus on the business. We handle the technology and strategy." },
-];
-
-const testimonials = [
-  {
-    quote: "They didn't just give advice — they helped me ship a working product in 3 weeks. The AI DLC methodology is real.",
-    name: "Priya Sharma",
-    role: "Founder, EduFlow",
-    rating: 5,
-  },
-  {
-    quote: "I went from a vague idea to a product with paying customers in under 2 months. Naveek Tech Labs changed the game for me.",
-    name: "Arjun Mehta",
-    role: "Founder, GreenRoute",
-    rating: 5,
-  },
-  {
-    quote: "The discovery session alone was worth 10x the price. They saw angles in my business I'd completely missed.",
-    name: "Sarah Chen",
-    role: "Founder, NomadKit",
-    rating: 5,
-  },
 ];
 
 const faqs = [
@@ -357,55 +335,6 @@ export default function HomePage() {
                         <ChevronRight className="ml-1 w-4 h-4" />
                       </a>
                     </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 px-6 border-t border-border">
-        <div className="mx-auto max-w-7xl">
-          <motion.div
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-          >
-            <motion.p className="text-sm font-medium text-primary mb-3 uppercase tracking-wider" variants={fadeUp}>
-              Testimonials
-            </motion.p>
-            <motion.h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4" variants={fadeUp}>
-              Founders Who Shipped
-            </motion.h2>
-          </motion.div>
-
-          <motion.div
-            className="grid md:grid-cols-3 gap-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-          >
-            {testimonials.map((t) => (
-              <motion.div key={t.name} variants={fadeUp}>
-                <Card className="h-full bg-card/50 border-border">
-                  <CardContent className="p-6">
-                    <div className="flex gap-1 mb-4">
-                      {Array.from({ length: t.rating }).map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                      ))}
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed italic">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                    <div>
-                      <p className="text-sm font-semibold">{t.name}</p>
-                      <p className="text-xs text-muted-foreground">{t.role}</p>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
